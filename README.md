@@ -85,3 +85,8 @@ USE `yourdatabase`;
 
 ![](https://media.giphy.com/media/l0amJzVHIAfl7jMDos/giphy.gif?cid=ecf05e47b690yt44utur1mtctup5iixr3nfq3khcp4aendrn&rid=giphy.gif&ct=g)
 
+### Important:
+Use with [screenshot-basic](https://github.com/citizenfx/screenshot-basic)
+
+#Download here
+https://github.com/fauzihalabe/halabera_phone/releases/tag/0.0.1
