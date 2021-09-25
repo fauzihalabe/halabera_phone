@@ -1,6 +1,9 @@
 # halabera_phone
 ## Phone for FiveM 
 
+![](https://cdn.discordapp.com/attachments/845876205415956490/891339855559266354/unknown.png)
+![](https://cdn.discordapp.com/attachments/845876205415956490/891339968205688852/unknown.png)
+
 ### Update your database (SQL File): 
 >CREATE DATABASE IF NOT EXISTS `yourdatabase` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `yourdatabase`;
