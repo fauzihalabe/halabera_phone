@@ -82,7 +82,7 @@ USE `yourdatabase`;
   `seguindo` varchar(50) DEFAULT NULL
 >) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-### Change discord webhook:
+### Change discord webhook to upload phone images:
 >function/server.lua line 133 
 
 
