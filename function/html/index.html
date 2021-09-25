@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="index.css" type="text/css">
+	<link rel="stylesheet" href="device.css" type="text/css">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Halabera Phone</title>
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f572b9b67e.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+	<style>
+		.paginate {
+			margin-right: 5px;
+		}
+
+		li {
+			display: inline-block;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container2" class="contt2 none" style="margin-top: 0%; width: 100%; height: 100%;">
+	</div>
+
+	<div id="container" class="contt" style="margin-top: 0%;">
+		<div class="marvel-device iphone-x">
+			<div class="closeBtn" id="home"></div>
+			<div class="notch">
+				<div class="camera"></div>
+				<div class="speaker"></div>
+			</div>
+			<div class="top-bar"></div>
+			<div class="sleep"></div>
+			<div class="bottom-bar"></div>
+			<div class="volume"></div>
+			<div class="overflow">
+				<div class="shadow shadow--tr"></div>
+				<div class="shadow shadow--tl"></div>
+				<div class="shadow shadow--br"></div>
+				<div class="shadow shadow--bl"></div>
+			</div>
+			<div class="inner-shadow"></div>
+			<div class="screen" id="scre">
+				<!--////////////////////////////////////////// ***** PÁGINA HOME ***** ////////////////////////////////////////// -->
+				<div class="page page-home">
+					<div class="row">
+						<div class="whatsapp icon" id="whatsapp">
+							<p class="iconText">FuturoApp</p>
+						</div>
+						<div class="insta icon" id="instagram">
+							<p class="iconText">Futurogram</p>
+						</div>
+						<div class="notes icon" id="notas">
+							<p class="iconText">Notas</p>
+						</div>
+						<div class="photos icon" id="galeria">
+							<p class="iconText">Fotos</p>
+						</div>
+					</div>
+					<div class="bottombar">
+						<div class="call icon" id="contatos"></div>
+						<div class="safari icon" id="game"></div>
+						<div class="iosmessage icon"></div>
+						<div class="camera1 icon" id="camera"></div>
+					</div>
+					<div class="bottombar2"></div>
+				</div>
+
+				<!--////////////////////////////////////////// ***** PÁGINA GAME ***** ////////////////////////////////////////// -->
+				<div class="page page-game none" style="background: #0099cc; height: 100%;">
+					<iframe style="margin-top: 50%;" id="muted" volume="0"
+						src="https://ellisonleao.github.io/clumsy-bird/" width="100%" height="100%"
+						frameBorder="0"></iframe>
+				</div>
+
+				<!--////////////////////////////////////////// ***** PÁGINA INSTAGRAM ***** ////////////////////////////////////////// -->
+				<div class="page page-instagram none">
+					<!-- CADASTRO -->
+					<div id="instagram-cadastro" class="posicionarinsta instapadding none fadeIn">
+						<img class="logoinsta" src="./img/logoinsta.png">
+						<p class="escolhernomedeusuario">Escolher nome de usuário</p>
+						<input type="text" id="inp_instagram_usuario" class="instagraminput"
+							placeholder="Nome de usuário">
+						<div class="instabutton" id="criar_instauser">Avançar</div>
+					</div>
+
+					<!-- LEGENDA DA FOTO -->
+					<div id="instagram-legenda" class="padding15 fadeIn none">
+						<div>
+							<p id="voltar-legenda" class="w-comentarios2"><img src="./img/voltar.png"
+									style="width: 25px; margin-right: 25px; position: relative; top: -1px">Nova
+								publicação
+							</p>
+
+							<img id="publicarinstagram" src="./icones/tick.png"
+								style="width: 18px; right: 25px; position: absolute; top: 52px ">
+						</div>
+
+						<div class="row">
+							<div class="col-md-2">
+								<div class="avatar-insta2" id="user-avatar-legenda"></div>
+							</div>
+
+							<div class="col-md-7">
+								<input id="insta-legenda-inp" placeholder="Escreva uma legenda..."
+									class="fazer-comentario-input" style="position: relative; top: 12.5px">
+
+							</div>
+
+							<div class="col-md-3">
+								<div id="img-legenda-insta"
+									style="background-size: cover !important; width: 100%; height: 40px; position: relative; top: 5px; ">
+								</div>
+							</div>
+						</div>
+						<div style="width: 100%; background: #000; margin-top: 15px;" class="none"
+							id="sugestoes-usuarios"></div>
+					</div>
+
+					<!-- PREVIEW FOTO -->
+					<div id="instagram-preview" class="padding15 none fadeIn">
+						<div>
+							<p id="voltar-preview" class="w-comentarios"><img src="./img/voltar.png"
+									style="width: 25px; margin-right: 25px; position: relative; top: -1px">
+							</p>
+
+							<img id="instalegenda" src="./img/voltar.png"
+								style="width: 25px; right: 25px; position: absolute; top: 55px;transform: rotate(180deg); ">
+						</div>
+
+						<div class="row">
+							<img style="width: 100%;" id="img-preview" src="">
+						</div>
+
+						<div class="slidefiltros">
+							<div class="col-img" style="padding:  0px;padding-right: 5px; display: inline-block;">
+								<img style="width: 100%;" id="resetarfiltros">
+							</div>
+							<div class="col-img" style="padding:  0px;padding-right: 5px; display: inline-block;">
+								<img style="width: 100%;" id="filtro1" class="filtro1">
+							</div>
+							<div class="col-img" style="padding: 0px; padding-right: 5px;display: inline-block">
+								<img style="width: 100%;" id="filtro2" class="filtro2">
+							</div>
+							<div class="col-img" style="padding: 0px; padding-right: 5px;display: inline-block">
+								<img style="width: 100%;" id="filtro3" class="filtro3">
+							</div>
+							<div class="col-img" style="padding: 0px; padding-right: 5px;display: inline-block">
+								<img style="width: 100%;" id="filtro4" class="filtro4">
+							</div>
+							<div class="col-img" style="padding: 0px; padding-right: 5px;display: inline-block">
+								<img style="width: 100%;" id="filtro5" class="filtro5">
+							</div>
+							<div class="col-img" style="padding: 0px; padding-right: 5px;display: inline-block">
+								<img style="width: 100%;" id="filtro6" class="filtro6">
+							</div>
+						</div>
+					</div>
+
+
+					<!-- COMENTÁRIOS -->
+					<div id="instagram-comentarios" class=" none fadeIn commentsinsta">
+						<div id="voltar-comentarios" class="padding15">
+							<p class="w-comentarios"><img src="./img/voltar.png"
+									style="width: 25px; margin-right: 25px; position: relative; top: -1px">Comentários
+							</p>
+						</div>
+
+						<div id="foto-comentarios"></div>
+
+						<div id="divsug3" class="none"
+							style="margin-left: 10px; margin-bottom: 20px ;padding-top: 1px; background: rgb(32, 32, 32); padding-bottom: 10px; padding-left: 10px; border-radius: 5px;">
+							<p style="color:#fff; font-size:12px; margin-top: 9px !important;  font-weight: 700;"
+								id="fecharsug3">fechar</p>
+							<div style="width: 100%;  margin-top: 5px;" class="none" id="sugestoes-usuarios3"></div>
+						</div>
+
+
+
+						<div class="padding15">
+							<div id="posicaocurtidas">
+
+							</div>
+							<!-- <div class="row " style="margin-left: -7px !important;">
+								<div class="col-md-1 padding0 heartcol">
+									<img class="hearticon curtirinstagram2 heartcomments" id="likeinsta" src="./img/heart.png">
+								</div>
+								<div class="col-md-1 padding0"></div>
+								
+							</div> -->
+
+							<div class="row" style="margin-bottom: 20px !important">
+								<div class="col-md-2">
+									<div class="avatar-insta2" id="comentario-avatar"></div>
+								</div>
+								<div class="col-md-10">
+									<div class="row mgtoprowaction displayblock padrowcomentario positioncomentario">
+										<span class="insta-username2" id="comentario-username"></span>
+										<span class="insta-legenda" id="comentario-legenda"></span>
+									</div>
+								</div>
+							</div>
+
+							<div class="divisor-insta">
+
+							</div>
+
+
+							<div id="comentarios-lista"></div>
+
+							<!-- <div class="row">
+							<div class="col-md-2">
+								<div class="avatar-insta2"></div>
+							</div>
+							<div class="col-md-10">
+								<div class="row mgtoprowaction displayblock padrowcomentario psre">
+									<span class="insta-username2">vulgojgjg</span>
+									<span class="insta-legenda">balaaa</span>
+								</div>
+								<p class="insta-horario">30min</p>
+							</div>
+						</div> -->
+
+							<div class="fazer-comentario">
+								<div class="row">
+									<div class="col-md-2">
+										<div class="avatar-insta2" id="avatar-insta2"></div>
+									</div>
+									<div class="col-md-7 psrelativebot">
+										<input id="inpcomentario" placeholder="Comentar publicação..."
+											class="fazer-comentario-input">
+									</div>
+									<div class="col-md-2 psrelativebot2" id="publicarcomentario">
+										<p class="publicar-comentario">Publicar</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- EDITAR PERFIL -->
+					<div id="instagram-editarperfil" class="none" style="">
+						<img id="salvarperfil" src="./icones/tick.png"
+							style="width: 18px; right: 25px; position: absolute; top: 52px ">
+						<div class="instapadding" style="margin-top: 10px;  ;padding: 5px 20px">
+							<div id="updateimageperfil" class="avatarperfilinsta2"></div>
+
+							<div style="margin-top: 30px;">
+								<p class="pbio">Bio</p>
+								<input id="bioinp" class="inputbio">
+							</div>
+						</div>
+					</div>
+
+					<!-- PERFIL -->
+					<div id="instagram-perfil" class="none" style="">
+						<!-- HEADER -->
+						<div class="instapadding" style="margin-top: 10px;  ;padding: 5px 20px">
+							<div class="row">
+								<div class="col-md-3 colpadding0">
+									<div class="avatarperfilinsta" id="perfilinstaavatar"></div>
+								</div>
+								<div class="col-md-3 colpadding0 numbercenter">
+									<p class="instaperfilnumber" id="qntpubli">0</p>
+									<p class="instaperfillegend">Publicações</p>
+								</div>
+								<div class="col-md-3 colpadding0 numbercenter">
+									<p class="instaperfilnumber" id="qntseguidores">0</p>
+									<p class="instaperfillegend">Seguidores</p>
+								</div>
+								<div class="col-md-3 colpadding0 numbercenter">
+									<p class="instaperfilnumber" id="qntseguindo">0</p>
+									<p class="instaperfillegend">Seguindo</p>
+								</div>
+							</div>
+							<!--  -->
+
+							<div class="row" style="margin-top: 15px;">
+								<div class="col-md-12 colpadding0">
+									<p class="nameinstaperfil" id="nomeperfilinsta"></p>
+									<p class="bioinstaperfil" id="bioperfilinsta"></p>
+								</div>
+							</div>
+
+							<div class="row" style="margin-top: 5px;" id="editarperfil">
+								<div class="editprofilebtn">
+									Editar perfil
+								</div>
+							</div>
+
+							<div class="row" style="margin-top: 5px;" id="seguirperfil">
+								<div class="editprofilebtn2">
+									Seguir
+								</div>
+							</div>
+
+							<div class="row" style="margin-top: 5px;" id="deixarseguirperfil">
+								<div class="editprofilebtn">
+									Deixar de seguir
+								</div>
+							</div>
+						</div>
+
+						<!-- LOADING -->
+						<div id="loadinginsta2" style="margin-bottom: 1000px !important; margin-top: 50px;">
+							<div class="skeleton"></div>
+						</div>
+
+						<div class="row" id="feedpessoal"
+							style="margin-top: 25px;padding: 5px 20px; margin-bottom: 1000px">
+
+						</div>
+
+						<div class="bottominstagram">
+							<div class="row">
+								<div class="col-md-4 centerimg" id="abrirfeed2">
+									<img src="./img/casa.png" class="imgbot">
+								</div>
+
+								<div class="col-md-4 centerimg" id="abrirpesquisa2">
+									<img src="./img/lupa.png" class="imgbot">
+								</div>
+
+								<div class="col-md-4 centerimg" style=" padding: 10px;">
+									<div id="bottominstaavatar" class="bottominstaavatar"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- PESQUISAR -->
+					<div id="instagram-pesquisar" class="none" style="">
+						<!-- HEADER -->
+						<div class="row instapadding"
+							style="margin-top: 10px; margin-bottom: 1000px; padding: 5px 20px">
+							<div class="" style="width: 100%;">
+								<div class="row bginp">
+									<div class="col-md-1" style="padding: 0px !important;">
+										<img src="img/lupa.png" class="imglupa">
+									</div>
+									<div class="col-md-10" style="padding: 0px !important;">
+										<input id="inppesquisar" class="inppesquisarinsta" placeholder="Pesquisar">
+									</div>
+								</div>
+
+								<div style="width: 100%; background: #000; margin-top: 15px;" class="none"
+									id="sugestoes-usuarios2"></div>
+							</div>
+						</div>
+
+
+
+						<div class="bottominstagram">
+							<div class="row">
+								<div class="col-md-4 centerimg" id="abrirfeed">
+									<img src="./img/casa.png" class="imgbot">
+								</div>
+
+								<div class="col-md-4 centerimg">
+									<img src="./img/lupa.png" class="imgbot">
+								</div>
+
+								<div class="col-md-4 centerimg" style=" padding: 10px;" id="abrirperfil">
+									<div id="bottominstaavatar1" class="bottominstaavatar"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- FEED -->
+					<div id="instagram-feed" class="none">
+						<!-- HEADER -->
+						<div class="row instapadding" style="margin-top: 10px;">
+							<div class="col-md-5">
+								<img class="logoinstaheader" style="width: 105%;" src="./img/logoinsta.png">
+							</div>
+							<div class="col-md-3"></div>
+
+							<!-- <div class="col-md-1" id="instanovafoto" style="padding: 0px; margin-left: 10px;">
+								<img style="width: 80%;" src="./img/add-icon.png">
+							</div> -->
+							<!-- <div class="col-md-1" style="padding: 0px;"></div>
+							<div class="col-md-1" style="padding: 0px;">
+								<img style="width: 80%;" src="./img/heart.png">
+							</div> -->
+							<div class="col-md-1" style="padding: 0px; margin-left: 10px;"></div>
+							<div class="col-md-1" style="padding: 0px;"></div>
+							<div class="col-md-1" id="instanovafoto" style="padding: 0px;">
+								<img style="width: 80%;" src="./img/add-icon.png">
+							</div>
+						</div>
+
+						<!-- LOADING -->
+						<div id="loadinginsta" style="margin-bottom: 1000px !important;">
+							<div class="skeleton"></div>
+						</div>
+
+
+						<!-- ITEMS -->
+						<div id="feed-lista">
+							<!-- <div style="margin-top: 20px;" class="fadeIn">
+								<div class="row instapadding padding10">
+									<div class="col-md-3">
+										<div class="avatar-insta"></div>
+									</div>
+									<div class="col-md-9 ">
+										<span class="insta-username">fauzihalabe <img class="verificado"
+												src="./img/verificado.png"></span>
+									</div>
+								</div>
+
+								<img class="w100 mgtopimg"
+									src="https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+
+								<div class="row instapadding mgtoprowaction">
+									<div class="col-md-1 padding0 heartcol">
+										<img class="hearticon" src="./img/heart.png">
+									</div>
+									<div class="col-md-1 padding0"></div>
+									<div class="col-md-1 padding0 mgleftnegative" id="abrir-comentarios3">
+										<img class="hearticon" src="./img/comment.png">
+									</div>
+								</div>
+
+								<div class="row instapadding mgtoprowaction displayblock">
+									<span class="insta-username2">fauzihalabe</span>
+									<span class="insta-legenda">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+										sed
+										do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua</span>
+									<p class="insta-comentarios" id="abrir-comentarios">Ver todos os comentários</p>
+								</div>
+
+								<div class="row instapadding padding25" id="abrir-comentarios2">
+									<div class="col-md-3 padding0">
+										<div class="avatar-insta-profile"></div>
+									</div>
+									<div class="col-md-9 ">
+										<p class="insta-comentarioadd">Adicione um comentário...</p>
+									</div>
+								</div>
+							</div> -->
+						</div>
+
+						<footer class="bottominstagram">
+							<div class="row">
+								<div class="col-md-4 centerimg">
+									<img src="./img/casa.png" class="imgbot">
+								</div>
+
+								<div class="col-md-4 centerimg" id="abrirpesquisa">
+									<img src="./img/lupa.png" class="imgbot">
+								</div>
+
+								<div class="col-md-4 centerimg" style=" padding: 10px;" id="abrirperfil2">
+									<div id="bottominstaavatar2" class="bottominstaavatar"></div>
+								</div>
+							</div>
+						</footer>
+					</div>
+
+
+				</div>
+
+				<!--////////////////////////////////////////// ***** PÁGINA WHATSAPP ***** ////////////////////////////////////////// -->
+				<div class="page page-whats none">
+					<div id="whatsapp-home" class="none" style="padding: 15px;">
+						<div>
+							<p class="w-conversas">Conversas</p>
+						</div>
+						<img id="contatos-whatsapp" src="./icones/mais.png"
+							style="width: 18px; right: 25px; position: absolute; top: 52px ">
+
+						<!-- LISTA -->
+						<div id="lconv">
+
+						</div>
+						<!-- <div class="row w-i">
+							<div class="col-md-3">
+								<div class="w-avatar">
+
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="w-item">
+									<div class="row">
+										<div class="col-md-10">
+											<p class="w-name">Fauzi Halabe</p>
+											<p class="w-preview">Sem mensagens</p>
+										</div>
+										<div class="col-md-2">
+											<p class="w-horario">03:50</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+
+					<div id="whatsapp-contatos" class="none" " style="padding: 15px;">
+						<div>
+							<p class="w-conversas">Nova conversa</p>
+						</div>
+						<img id="novaconversa" src="./icones/mais.png"
+							style="width: 18px; right: 25px; position: absolute; top: 52px ">
+
+						<!-- LISTA -->
+						<div id="cont-zap">
+							<!-- <div class="row w-i">
+							<div class="col-md-3">
+								<div class="w-avatar">
+	
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="w-item">
+									<div class="row">
+										<div class="col-md-10">
+											<p class="w-name">Fauzi Halabe</p>
+											<p class="w-preview">Sem mensagens</p>
+										</div>
+										<div class="col-md-2">
+											<p class="w-horario">03:50</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+						</div>
+
+					</div>
+
+					<div id="whatsapp-conversa" class="none" style="height: 100%;">
+						<div style="background: #0f0f0f; margin-top: 15px; padding: 10px 0px; padding-bottom: 5px !important;" class="sttop">
+							<div id="whatsapp-voltarconversa" class="padding15" style="padding-bottom: 0px !important;">
+								<div class="row">
+									<div class="col-md-1">
+										<img src="./icones/aaaa.png"
+										style="width: 17px; margin-right: 25px; position: relative; top: -1px; display: inline-block;">
+									</div>
+									<div class="col-md-10">
+										<div class="w-avatar3">
+	
+										</div>
+										<p class="w-comentarios3" id="convname">	</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="conversacont" id="ccontent">
+							<!-- <div class="mensagemverde">
+							</div>
+							<div class="mensagemcinza">
+							</div> -->
+						</div>
+
+						<div style="background: #0f0f0f; padding-top: 5px; padding-bottom: 7px; padding-left: 5px; padding-right: 5px;" class="botwhats">
+							<input class="inpwhats" id="whatsinpt">
+						</div>
+					</div>
+				</div>
+
+				<!--////////////////////////////////////////// ***** PÁGINA GALERIA ***** ////////////////////////////////////////// -->
+				<div class="page page-galeria none">
+					<div id="g-lista">
+						<p class="w-conversas" style="margin-left: 15px; margin-bottom: 10px;">Galeria</p>
+
+						<!-- LISTA -->
+						<div class="row w-i" id="rowgaleria">
+
+						</div>
+					</div>
+
+					<!-- INTEIRO -->
+					<div class="row w-i none" id="galeriafull">
+						<div style="position: relative;" id="g-back">
+							<p class="w-conversas" style="margin-left: 35px; margin-bottom: 10px;"> <i
+									class="fas fa-chevron-left backIcon"></i> </p>
+						</div>
+
+						<img style="width: 100%; margin-top: 100px;" src="" id="g-full">
+
+						<div style="padding: 35px; width: 100%;">
+							<div class="actionbutton" id="g-apagar" style="background: rgb(207, 65, 65);;">
+								Apagar
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+
+
+				<!--////////////////////////////////////////// ***** PÁGINA NOTAS ***** ////////////////////////////////////////// -->
+				<div class="page page-notas none">
+					<!-- LISTA  -->
+					<div id="n-lista">
+						<div style="position: relative;" id="n-novabtn">
+							<p class="w-conversas">Notas</p>
+							<i class="fas fa-plus c-iconAdd"></i>
+						</div>
+					</div>
+
+					<!-- NOVO -->
+					<div id="n-nova" class="none">
+						<div style="position: relative;" id="n-back">
+							<p class="w-conversas"> <i class="fas fa-chevron-left backIcon"></i>Nova nota</p>
+						</div>
+
+						<div class="row w-i">
+							<div class="col-md-12">
+								<div class="w-item2">
+									<div class="row">
+										<div class="col-md-3">
+											<p class="w-preview" style="margin-top: 2.5px; font-size: 14px;">Título</p>
+										</div>
+										<div class="col-md-6">
+											<input id="n-titulo" class="c-input" placeholder="Digite aqui">
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row w-i" style="margin-top: 20px;">
+							<div class="col-md-12">
+								<div>
+									<div class="row">
+										<div class="col-md-12">
+											<textarea id="n-nota" class="c-input"
+												placeholder="Digite suas anotações aqui"
+												style="height: 380px; width: 100%;"></textarea>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="actionbutton" id="n-salvar">
+							Salvar
+						</div>
+					</div>
+
+					<!-- EDITAR -->
+					<div id="n-editar" class="none">
+						<div style="position: relative;" id="n-back2">
+							<p class="w-conversas"> <i class="fas fa-chevron-left backIcon"></i>Editar nota</p>
+						</div>
+
+						<div class="row w-i">
+							<div class="col-md-12">
+								<div class="w-item2">
+									<div class="row">
+										<div class="col-md-3">
+											<p class="w-preview" style="margin-top: 2.5px; font-size: 14px;">Título</p>
+										</div>
+										<div class="col-md-6">
+											<input id="n-titulo-edit" class="c-input" placeholder="Digite aqui">
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row w-i" style="margin-top: 20px;">
+							<div class="col-md-12">
+								<div>
+									<div class="row">
+										<div class="col-md-12">
+											<textarea id="n-nota-edit" class="c-input"
+												placeholder="Digite suas anotações aqui"
+												style="height: 380px; width: 100%;"></textarea>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="actionbutton" id="n-salvar-edit">
+							Salvar
+						</div>
+					</div>
+				</div>
+
+				<!--////////////////////////////////////////// ***** PÁGINA CONTATOS ***** ////////////////////////////////////////// -->
+				<div class="page page-contatos none">
+					<!-- LISTA  -->
+					<div id="c-lista">
+						<div style="position: relative;" id="c-novoc">
+							<p class="w-conversas">Contatos</p>
+							<i class="fas fa-plus c-iconAdd"></i>
+						</div>
+					</div>
+
+					<!-- NOVO -->
+					<div id="c-novo" class="none">
+						<div style="position: relative;" id="c-back">
+							<p class="w-conversas"> <i class="fas fa-chevron-left backIcon"></i>Novo contato</p>
+						</div>
+
+						<div class="row w-i">
+							<div class="col-md-12">
+								<div class="w-item2">
+									<div class="row">
+										<div class="col-md-3">
+											<p class="w-preview" style="margin-top: 2.5px; font-size: 14px;">Nome</p>
+										</div>
+										<div class="col-md-6">
+											<input id="c-nome" class="c-input" placeholder="Digite aqui">
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row w-i">
+							<div class="col-md-12">
+								<div class="w-item2">
+									<div class="row">
+										<div class="col-md-3">
+											<p class="w-preview" style="margin-top: 2.5px; font-size: 14px;">Número</p>
+										</div>
+										<div class="col-md-6">
+											<input id="c-numero" class="c-input" placeholder="Digite aqui">
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="actionbutton" id="c-salvar">
+							Salvar
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://apis.google.com/js/api.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+	<script src="./index.js"></script>
+	<script src="./script.js"></script>
+</body>
+
+</html>
